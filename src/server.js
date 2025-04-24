@@ -1,13 +1,11 @@
 import express from 'express';
 import cors from 'cors';
-import axios from 'axios';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
 
 // Routes
-import weatherRoute from '../routes/weatherRoute.js';
-// import imageRoute from '../routes/imageRoute.js';
+import callsRoute from '../routes/callsRoute.js';
 
 dotenv.config();
 
@@ -31,8 +29,7 @@ app.get('/', (req, res) => {
 });
 
 // Use routes
-app.use('/api/weather', weatherRoute);
-// app.use('/api/image', imageRoute);
+app.use('/api/weather', callsRoute);
 
 // Start server
 app.listen(PORT, () => {
