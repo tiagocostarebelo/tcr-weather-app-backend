@@ -142,4 +142,4 @@ The server will start, typically on `http://localhost:5500` (or the port specifi
 
 ## License
 
-[Specify Your License Here - e.g., MIT License]
+MIT
