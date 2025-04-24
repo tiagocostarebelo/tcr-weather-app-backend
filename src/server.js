@@ -21,12 +21,12 @@ app.use(cors());
 app.use(express.json());
 
 // Serve static frontend files 
-app.use(express.static(path.join(__dirname, '../../frontend')));
+// app.use(express.static(path.join(__dirname, '../../frontend')));
 
 // Serve main HTML
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../frontend/index.html'));
-});
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../../frontend/index.html'));
+// });
 
 // Use routes
 app.use('/api/weather', callsRoute);
