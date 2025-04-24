@@ -2,7 +2,7 @@
 
 ## Overview
 
-This directory contains the Node.js backend service for the Weather App MVP. Built with Express.js, this server performs two primary functions:
+This directory contains the Node.js backend service for the MVP version of this Weather App. Built with Express.js, this server performs two primary functions:
 
 1.  **Serves the Frontend:** Delivers the static HTML, CSS, and JavaScript files for the Weather App Frontend.
 2.  **Acts as an API Proxy/Aggregator:** Provides a dedicated API endpoint (`/api/weather`) that securely handles requests from the frontend. It fetches weather data from the OpenWeatherMap API and relevant background images from the Unsplash API using server-side API keys, processes the data, and returns a combined, structured response to the frontend.
