@@ -125,7 +125,7 @@ The server will start, typically on `http://localhost:5500` (or the port specifi
             "temperature": 15.7,
             "feelsLike": 15.1,
             "humidity": 75,
-            "windSpeed": 3.6 // Note: Check units (m/s from API vs mph in frontend)
+            "windSpeed": 3.6 
           },
           "image": {
             "unsplashImageUrl": "https://images.unsplash.com/...",
