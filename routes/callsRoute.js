@@ -1,5 +1,4 @@
 import express from 'express';
-import cors from 'cors';
 import axios from 'axios';
 import dotenv from 'dotenv';
 
@@ -59,7 +58,7 @@ router.post('/', async (req, res) => {
                 }
             });
 
-            if (unsplashRes.data.results.length < 0) {
+            if (unsplashRes.data.results.length === 0) {
                 const unsplashRes = await axios.get(`${unsplash.UNSPLASH_URL}`, {
                     params: {
                         query: filteredWeatherData.country,
@@ -69,10 +68,9 @@ router.post('/', async (req, res) => {
                 });
             }
             unsplashData = {
-                unsplashImageUrl: unsplashRes.data.results[0].urls.full,
+                unsplashImageUrl: unsplashRes.data.results[0].urls.regular,
                 name: unsplashRes.data.results[0].user.name,
-                unsplash_link: unsplashRes.data.results[0].user.links.html,
-                portfolio_url: unsplashRes.data.results[0].user.portfolio_url,
+                unsplash_link: unsplashRes.data.results[0].user.links.html
             }
         } catch (error) {
             console.error('Error fetching image data:', error.message);
